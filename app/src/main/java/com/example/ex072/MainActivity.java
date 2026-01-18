@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn;
     ImageView iV;
+    int num;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,6 +27,14 @@ public class MainActivity extends AppCompatActivity {
 
     public void clicked(View view)
     {
-
+        num = (int) (Math.random() * 3 + 1);
+        btn.setText("" + num);
+        if (num == 1) {
+            iV.setImageResource(R.drawable.dog);
+        } else if (num == 2) {
+            iV.setImageResource(R.drawable.cat);
+        } else {
+            iV.setImageResource(R.drawable.sqr);
+        }
     }
 }
